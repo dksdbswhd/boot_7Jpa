@@ -29,7 +29,7 @@ public class Users extends BaseEntity{
 	@Column(nullable = false, unique = true)  //컬럼명 지정.변수명과같으면 생략
 	private String email;					//널허용,유니크 등 설정 
 	
-	@Column
+	@Column(updatable = false)
 	private String password;
 	
 	@Column

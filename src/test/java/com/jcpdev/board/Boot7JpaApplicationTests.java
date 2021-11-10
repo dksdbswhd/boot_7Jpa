@@ -15,8 +15,9 @@ class Boot7JpaApplicationTests {
 	@Autowired
 	UsersRepository udao;
 
+	//Jpa + 3rd Party 라이브러리
 	@Test
-	public void update() {
+	public void update() {   
 		Users member=
 			Users.builder().mno(2L)
 			.email("serii@jcp.kr")
@@ -36,7 +37,6 @@ class Boot7JpaApplicationTests {
 			udao.save(member);		
 		});
 	}
-	
 	
 	void insertUser() {
 		Users user = Users.builder()

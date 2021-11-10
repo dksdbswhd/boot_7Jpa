@@ -20,10 +20,10 @@ import lombok.ToString;
 @Getter
 @ToString
 @Table(name="users")
-public class Users {
+public class Users extends BaseEntity{
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id		//기본키 컬럼
+	@GeneratedValue(strategy = GenerationType.IDENTITY)	//auto increment (sequence)
 	private Long mno;
 	
 	@Column(nullable = false, unique = true)  //컬럼명 지정.변수명과같으면 생략

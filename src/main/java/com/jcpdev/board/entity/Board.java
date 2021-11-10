@@ -20,7 +20,7 @@ import lombok.ToString;
 @Builder
 @ToString
 @Table(name="board")	//board 테이블과 매핑됩니다.클래스명과 동일하면 생략가능.
-public class Board {
+public class Board extends BaseEntity{
 	//테이블의 컬럼과 매핑되도록 선언합니다.
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
